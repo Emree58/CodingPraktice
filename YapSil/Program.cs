@@ -62,38 +62,58 @@ namespace YapSil
             //    Console.WriteLine("------------");
             //}
 
-            Product product1 = new Product();
-            product1.ProductId = 1;
-            product1.ProductName = "Bmw 740Ld";
+            //Product product1 = new Product();
+            //product1.ProductId = 1;
+            //product1.ProductName = "Bmw 740Ld";
 
-            Product product2 = new Product();
-            product2.ProductId = 2;
-            product2.ProductName = "Mercedes S Klasse";
+            //Product product2 = new Product();
+            //product2.ProductId = 2;
+            //product2.ProductName = "Mercedes S Klasse";
 
-            Product[] products = new Product[]{product1 , product2};
+            //Product[] products = new Product[]{product1 , product2};
 
 
-            foreach (Product productler in products)
+            //foreach (Product productler in products)
+            //{
+            //    Console.WriteLine(productler.ProductId);
+            //    Console.WriteLine("-----------");
+            //    Console.WriteLine(productler.ProductName);
+            //}
+
+            //Console.WriteLine("-----------------------------");
+
+            //for (int i = 0; i < products.Length; i++)
+            //{
+            //    Console.WriteLine(products[i].ProductId);
+            //    Console.WriteLine("----");
+            //    Console.WriteLine(products[i].ProductName);
+            //    Console.WriteLine("----------");
+            //}
+
+            //Product product1 = new Product();
+            //product1.ProductId = 1;
+            //product1.ProductCategory = "Mobilya";
+            //product1.ProductName = "Sandalye";
+
+            //List<T> productt = new List<T> { "Sandalye", "Masa"};
+
+            int[] intArray = { 1, 2, 3 };
+            double[] doubleArray = { 1.0, 2.0, 3.0 };
+            string[] stringArray = { "a", "b", "c" };
+
+            verzend(intArray);
+            verzend(doubleArray);
+            verzend(stringArray);
+
+        }
+
+        public static void verzend<T>(T[] array) 
+        {
+            foreach (T item in array)
             {
-                Console.WriteLine(productler.ProductId);
-                Console.WriteLine("-----------");
-                Console.WriteLine(productler.ProductName);
+                Console.Write($"Verzonden: {item} ");
             }
-
-            Console.WriteLine("-----------------------------");
-
-            for (int i = 0; i < products.Length; i++)
-            {
-                Console.WriteLine(products[i].ProductId);
-                Console.WriteLine("----");
-                Console.WriteLine(products[i].ProductName);
-                Console.WriteLine("----------");
-            }
-
-
-
-
-
+            Console.WriteLine();
         }
     }
 
@@ -113,3 +133,6 @@ namespace YapSil
         public double PriceProduct { get; set; }
     }
 }
+
+//generics devam izle en voorbeeld yap
+// ders 4 bitti. ödevleri izle ilk
